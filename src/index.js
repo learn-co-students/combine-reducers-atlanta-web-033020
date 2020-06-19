@@ -4,9 +4,16 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import manageAuthorsAndBooks from './reducers/manageAuthorsAndBooks';
-
-
+import authorsReducer from './reducers/authorsReducer';
+import booksReducer from './reducers/booksReducer';
+// import rootReducer from '.reducers/rootReducer'
+ 
 const store = createStore(manageAuthorsAndBooks, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+// const store = createStore(
+//   rootReducer,
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// );
 
 ReactDOM.render(
   <Provider store={store}>
